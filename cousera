@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Animals</title>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>My Favorite Animals</h1>
+        <p>Welcome to my page about some of the most amazing animals on Earth!</p>
+    </header>
+
+    <!-- Main content section -->
+    <main>
+        <section>
+            <h2>Animals I Love</h2>
+            <ul>
+                <li>Dogs</li>
+                <li>Cats</li>
+                <li>Dolphins</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Gallery</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Golden_Retriever_Carlos_%281051019616%29.jpg" alt="Dog" width="300">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Cat03.jpg" alt="Cat" width="300">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Dolphin_at_the_ocean.jpg" alt="Dolphin" width="300">
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>Learn more about animals at 
+            <a href="https://www.nationalgeographic.com/animals" target="_blank">
+                National Geographic
+            </a>.
+        </p>
+        <p>&copy; 2025 My Animal Page</p>
+    </footer>
+</body>
+</html>
