@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ROOT_USER // DEV.STK</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#1a1a1a",
+                        "outline-variant": "#d0cbc3",
+                        "on-tertiary-container": "#1a1a1a",
+                        "on-secondary-fixed": "#1a1a1a",
+                        "error": "#cc0000",
+                        "primary-container": "#ffcc00",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#d6e3ff",
+                        "primary": "#1a1a1a",
+                        "surface-dim": "#d6d1c9",
+                        "on-surface": "#1a1a1a",
+                        "on-primary-container": "#1a1a1a",
+                        "primary-fixed-dim": "#e6b800",
+                        "tertiary-fixed-dim": "#a8c6ff",
+                        "on-tertiary-fixed-variant": "#1a1a1a",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eee9e0",
+                        "secondary-fixed": "#ffdad6",
+                        "inverse-primary": "#f5f0e8",
+                        "surface-tint": "#1a1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#e63b2e",
+                        "primary-fixed": "#ffcc00",
+                        "surface-variant": "#e8e3da",
+                        "on-background": "#1a1a1a",
+                        "outline": "#1a1a1a",
+                        "on-secondary": "#1a1a1a",
+                        "inverse-surface": "#1a1a1a",
+                        "secondary-fixed-dim": "#ffb3ab",
+                        "on-tertiary-fixed": "#1a1a1a",
+                        "background": "#f5f0e8",
+                        "inverse-on-surface": "#f5f0e8",
+                        "on-primary-fixed-variant": "#1a1a1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#0055ff",
+                        "surface-container-high": "#e8e3da",
+                        "surface-container-highest": "#e2ddd4",
+                        "surface-bright": "#faf7f2",
+                        "on-primary-fixed": "#1a1a1a",
+                        "surface": "#f5f0e8",
+                        "tertiary-container": "#d6e3ff",
+                        "secondary-container": "#ffdad6",
+                        "on-surface-variant": "#4a4a4a",
+                        "on-secondary-container": "#1a1a1a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2ede5",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: theme('colors.background'); color: theme('colors.on-background'); scroll-behavior: smooth; }
+        /* Offset Shadow Mixins for Neo-Brutalism */
+        .shadow-brutal { box-shadow: 6px 6px 0px 0px theme('colors.primary'); }
+        .shadow-brutal-hover:hover { box-shadow: 2px 2px 0px 0px theme('colors.primary'); transform: translate(4px, 4px); }
+        .shadow-brutal-yellow { box-shadow: 6px 6px 0px 0px theme('colors.primary-fixed'); }
+    </style>
+</head>
+<body class="font-body min-h-screen flex flex-col md:flex-row">
+<!-- JSON: SideNavBar (Mobile Bottom, Desktop Side) -->
+<nav class="bg-surface dark:bg-primary text-primary dark:text-on-primary font-body font-bold text-sm uppercase h-screen w-64 fixed left-0 top-0 border-r-4 border-primary dark:border-primary-fixed shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] dark:shadow-[6px_6px_0px_0px_rgba(255,204,0,1)] flex flex-col p-6 space-y-8 hidden md:flex z-50">
+    <div class="font-display font-black text-xl text-primary dark:text-primary-fixed">
+        <span class="material-symbols-outlined align-middle mr-2" style="font-variation-settings: 'FILL' 1;">terminal</span>
+        ROOT_USER
+    </div>
+    <div class="text-xs text-on-surface-variant font-headline">Full-Stack Engineer</div>
+    <div class="flex-1 space-y-4 pt-8 overflow-y-auto">
+        <!-- Active State -->
+        <a class="flex items-center space-x-3 p-3 bg-primary dark:bg-primary-fixed text-on-primary dark:text-primary border-2 border-primary active:scale-95 transition-all" href="#">
+            <span class="material-symbols-outlined">terminal</span>
+            <span>Home</span>
+        </a>
+        <a class="flex items-center space-x-3 p-3 text-primary dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant hover:translate-x-1 transition-transform active:scale-95 transition-all" href="#projects">
+            <span class="material-symbols-outlined">grid_view</span>
+            <span>Projects</span>
+        </a>
+        <a class="flex items-center space-x-3 p-3 text-primary dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant hover:translate-x-1 transition-transform active:scale-95 transition-all" href="#stack">
+            <span class="material-symbols-outlined">layers</span>
+            <span>Stack</span>
+        </a>
+        <a class="flex items-center space-x-3 p-3 text-primary dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant hover:translate-x-1 transition-transform active:scale-95 transition-all" href="#certifications">
+            <span class="material-symbols-outlined">workspace_premium</span>
+            <span>Certifications</span>
+        </a>
+        <a class="flex items-center space-x-3 p-3 text-primary dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-variant hover:translate-x-1 transition-transform active:scale-95 transition-all" href="#contact">
+            <span class="material-symbols-outlined">mail</span>
+            <span>Contact</span>
+        </a>
+    </div>
+    <div class="mt-auto space-y-4">
+        <a class="block w-full text-center p-3 border-2 border-primary shadow-brutal hover:bg-primary hover:text-on-primary transition-colors font-headline font-bold" href="#">RESUME.PDF</a>
+        <div class="flex justify-between pt-4 border-t-2 border-primary">
+            <a aria-label="GitHub" class="text-primary hover:text-tertiary transition-colors" href="#"><span class="material-symbols-outlined">code</span></a>
+            <a aria-label="Source" class="text-primary hover:text-tertiary transition-colors" href="#"><span class="material-symbols-outlined">description</span></a>
+        </div>
+    </div>
+</nav>
+<!-- JSON: TopNavBar (Mobile Only) -->
+<nav class="md:hidden w-full sticky top-0 z-50 bg-background dark:bg-primary text-primary dark:text-on-primary font-headline font-bold uppercase tracking-tighter border-b-4 border-primary dark:border-primary-fixed flex justify-between items-center px-6 py-4 max-w-full mx-auto">
+    <div class="text-2xl font-display font-black text-primary dark:text-primary-fixed bg-primary dark:bg-primary-fixed text-on-primary dark:text-primary px-2">DEV.STK</div>
+    <div class="flex space-x-4">
+        <a class="text-tertiary dark:text-tertiary-fixed-dim underline decoration-4 underline-offset-4 hover:bg-primary hover:text-on-primary dark:hover:bg-primary-fixed dark:hover:text-primary transition-all duration-100 active:translate-x-1 active:translate-y-1" href="#projects">Work</a>
+        <a class="text-primary dark:text-on-surface hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:bg-primary hover:text-on-primary dark:hover:bg-primary-fixed dark:hover:text-primary transition-all duration-100 active:translate-x-1 active:translate-y-1" href="#stack">Tech</a>
+        <a class="text-primary dark:text-on-surface hover:text-secondary dark:hover:text-secondary-fixed transition-colors hover:bg-primary hover:text-on-primary dark:hover:bg-primary-fixed dark:hover:text-primary transition-all duration-100 active:translate-x-1 active:translate-y-1" href="#contact">Contact</a>
+    </div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 w-full flex flex-col">
+    <!-- Hero Section -->
+    <section class="min-h-[819px] flex flex-col justify-center items-start p-8 md:p-16 lg:p-24 border-b-8 border-primary bg-primary text-on-primary relative overflow-hidden">
+        <!-- Decorative Geo Element -->
+        <div class="absolute top-10 right-10 w-32 h-32 bg-primary-fixed border-4 border-primary rounded-full hidden md:block"></div>
+        <div class="absolute bottom-20 right-20 w-48 h-48 bg-secondary border-4 border-primary hidden lg:block transform rotate-12"></div>
+        <div class="z-10 relative">
+            <h1 class="font-display font-black text-6xl md:text-8xl lg:text-9xl leading-none tracking-tighter uppercase mb-6 drop-shadow-[4px_4px_0px_#ffcc00]">
+                ROOT_USER<br/>
+                <span class="text-primary-fixed">DEV.STK</span>
+            </h1>
+            <p class="font-headline text-xl md:text-3xl font-bold mb-12 max-w-2xl bg-primary text-on-primary inline-block px-2 border-2 border-on-primary shadow-[4px_4px_0px_0px_#ffffff]">
+                Full-Stack Engineer &amp; Problem Solver
+            </p>
+            <div>
+                <a class="inline-flex items-center px-8 py-4 bg-primary-fixed text-primary font-headline font-black text-2xl uppercase border-4 border-primary shadow-[8px_8px_0px_0px_#ffffff] hover:shadow-[2px_2px_0px_0px_#ffffff] hover:translate-x-[6px] hover:translate-y-[6px] transition-all" href="#">
+                    VIEW GITHUB
+                    <span class="material-symbols-outlined ml-3 text-3xl font-bold">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- About Me Section -->
+    <section class="p-8 md:p-16 lg:p-24 border-b-8 border-primary bg-background" id="bio">
+        <div class="max-w-5xl border-8 border-primary p-8 md:p-12 shadow-brutal bg-surface-container-lowest relative">
+            <div class="absolute -top-6 -left-6 bg-tertiary text-on-tertiary font-headline font-black text-xl px-4 py-2 border-4 border-primary uppercase shadow-brutal">SYS.INFO</div>
+            <h2 class="font-display font-black text-4xl md:text-6xl uppercase mb-8 border-b-4 border-primary pb-4">Initialize Sequence</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img alt="Developer Avatar" class="w-full h-auto border-8 border-primary shadow-brutal aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOZ4maFTmblq173rIfwdI4_eBjuGhiSYHadVL4g9JLkTV3uNIZ-FSZnAf-v9cNOmqnCeMbid9m5KFXZldXdmyjRZgrTSvR_12lDeNBdgxoODZ575Jwix1FyvZd9Q-8eKFpmhlDjfL2ni-DonpsduJnzzDSSJtIPcc26BD5CgyaBXC6dSRgvocF4IHLG1bf9V4XCQNN0FBsqRX3XAfqPqEMVb4QaOprX0q_rdVeXeBX7-zrsQksc5nRnyvlX6M5dev9PvGc1_HBo3I"/>
+                </div>
+                <div class="order-1 md:order-2">
+                    <p class="font-body text-lg md:text-xl leading-relaxed text-on-surface font-semibold">
+                        Executing robust backend architectures and highly responsive frontend interfaces. Passionate about clean code, scalable infrastructure, and relentless optimization. Every line is a deliberate choice. Form follows function.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Tech Stack Section -->
+    <section class="p-8 md:p-16 lg:p-24 border-b-8 border-primary bg-surface-variant" id="stack">
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12 flex items-center">
+            <span class="material-symbols-outlined text-6xl mr-4 text-secondary" style="font-variation-settings: 'FILL' 1;">layers</span>
+            CORE_STACK
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Stack Item 1 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 flex flex-col items-center justify-center aspect-square shadow-brutal hover:bg-primary hover:text-on-primary transition-colors group">
+                <span class="material-symbols-outlined text-6xl mb-4 text-tertiary group-hover:text-primary-fixed" style="font-variation-settings: 'FILL' 1;">coffee</span>
+                <span class="font-headline font-black text-3xl tracking-widest">JAVA</span>
+            </div>
+            <!-- Stack Item 2 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 flex flex-col items-center justify-center aspect-square shadow-brutal hover:bg-primary hover:text-on-primary transition-colors group">
+                <span class="material-symbols-outlined text-6xl mb-4 text-primary-fixed group-hover:text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+                <span class="font-headline font-black text-3xl tracking-widest">PYTHON</span>
+            </div>
+            <!-- Stack Item 3 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 flex flex-col items-center justify-center aspect-square shadow-brutal hover:bg-primary hover:text-on-primary transition-colors group">
+                <span class="material-symbols-outlined text-6xl mb-4 text-secondary group-hover:text-tertiary" style="font-variation-settings: 'FILL' 1;">database</span>
+                <span class="font-headline font-black text-3xl tracking-widest">SQL</span>
+            </div>
+            <!-- Stack Item 4 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 flex flex-col items-center justify-center aspect-square shadow-brutal hover:bg-primary hover:text-on-primary transition-colors group">
+                <span class="material-symbols-outlined text-6xl mb-4 text-primary group-hover:text-on-primary" style="font-variation-settings: 'FILL' 1;">code_blocks</span>
+                <span class="font-headline font-black text-xl tracking-widest text-center">INTELLIJ PRO</span>
+            </div>
+        </div>
+    </section>
+    <!-- New Certifications Section -->
+    <section class="p-8 md:p-16 lg:p-24 border-b-8 border-primary bg-surface-container" id="certifications">
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12 flex items-center">
+            <span class="mr-4 text-primary">🏆</span>
+            CERTIFICATIONS
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Cert 1 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 shadow-brutal flex flex-col justify-between">
+                <div>
+                    <div class="text-tertiary font-headline font-black text-xs uppercase mb-2 tracking-widest">Google Cloud</div>
+                    <h3 class="font-display font-black text-3xl uppercase mb-4 leading-tight">Professional Data Engineer</h3>
+                </div>
+                <a class="inline-block text-center bg-primary-fixed text-primary font-headline font-black py-4 border-4 border-primary shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all uppercase" href="#" target="_blank">
+                    VERIFY.CREDENTIAL
+                </a>
+            </div>
+            <!-- Cert 2 -->
+            <div class="border-4 border-primary bg-surface-container-lowest p-8 shadow-brutal flex flex-col justify-between">
+                <div>
+                    <div class="text-secondary font-headline font-black text-xs uppercase mb-2 tracking-widest">DeepLearning.AI</div>
+                    <h3 class="font-display font-black text-3xl uppercase mb-4 leading-tight">Deep Learning Specialization</h3>
+                </div>
+                <a class="inline-block text-center bg-primary-fixed text-primary font-headline font-black py-4 border-4 border-primary shadow-[4px_4px_0px_0px_#1a1a1a] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all uppercase" href="#" target="_blank">
+                    VERIFY.CREDENTIAL
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section class="p-8 md:p-16 lg:p-24 bg-background border-b-8 border-primary" id="projects">
+        <h2 class="font-display font-black text-5xl md:text-7xl uppercase mb-12 flex items-center">
+            <span class="material-symbols-outlined text-6xl mr-4 text-primary-fixed" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+            DEPLOYMENTS
+        </h2>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <!-- Project Alpha -->
+            <article class="border-4 border-primary bg-surface-container-lowest shadow-brutal shadow-brutal-hover transition-all flex flex-col">
+                <div class="h-48 bg-primary border-b-4 border-primary relative overflow-hidden">
+                    <img alt="Cyber security code visualization" class="w-full h-full object-cover opacity-80 mix-blend-luminosity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqyPEcFblxF8gkApRYtdMtsWj1oFG_pwAakDOYsP5Ji6rkONz7OLrV7SWX3AuZQ3oY1-e_NWmwANSy-aoEt7RAhoNt5njg8V9U7Bx5A26ErsTxwoLicgHUUVSW6W1cB6DfZFAfi4ow2FPjmHI9nW3GGXtsHNJrekNJN1AgorS54dB9FgGRW1YtWch60YKtie_64R7q8Qt_NBbi2h4DkjD7UmqqltP4_7rFegh9wdLFH8YN5YNEnwIv1TepbxQf-AxuoGVkyZsZJ6g"/>
+                    <div class="absolute top-4 right-4 bg-primary-fixed text-primary font-headline font-bold px-2 py-1 border-2 border-primary">v1.0.0</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-display font-black text-2xl uppercase mb-2">Project Alpha</h3>
+                    <p class="font-body text-on-surface-variant font-medium mb-6 flex-1">High-throughput data ingestion pipeline utilizing Apache Kafka and Spring Boot. Processes millions of events per second with zero data loss.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">Java</span>
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">Kafka</span>
+                    </div>
+                    <a class="block w-full text-center bg-primary text-on-primary font-headline font-bold py-3 border-2 border-primary hover:bg-tertiary hover:text-on-tertiary transition-colors uppercase" href="#">
+                        REPO.LINK <span class="material-symbols-outlined align-middle ml-1 text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Project Beta -->
+            <article class="border-4 border-primary bg-surface-container-lowest shadow-brutal shadow-brutal-hover transition-all flex flex-col">
+                <div class="h-48 bg-secondary border-b-4 border-primary relative overflow-hidden">
+                    <img alt="Matrix style digital rain" class="w-full h-full object-cover mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUadfPZiWMzfxA--Yp2N-IaFOU19As1T6gJnvOzzHkECK_Plqp_qfUFzhjAT1_1hTB9wQQ9HbY_x6t4dEjwDK_9P46H8to9ppC7EA2kN7hUmxccoCcCGEGzqZkTiraPErFq50wBZTLlBCQn3ii6DQRKgXHeyYOUGp9s85T0yMlBmViZsMBmwkdWXyulPfQFIIyUSaLNgyS7iBkritC723XoxToaHGnl2fT-JWz1qYpFW4jAbJD_RYaMwivIbDJBMA1Jyit8b4tapw"/>
+                    <div class="absolute top-4 right-4 bg-on-primary text-primary font-headline font-bold px-2 py-1 border-2 border-primary">BETA</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-display font-black text-2xl uppercase mb-2">Project Beta</h3>
+                    <p class="font-body text-on-surface-variant font-medium mb-6 flex-1">Machine learning model for predictive analytics in supply chain logistics. Reduced overhead costs by 14% across global operations.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">Python</span>
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">TensorFlow</span>
+                    </div>
+                    <a class="block w-full text-center bg-primary text-on-primary font-headline font-bold py-3 border-2 border-primary hover:bg-tertiary hover:text-on-tertiary transition-colors uppercase" href="#">
+                        REPO.LINK <span class="material-symbols-outlined align-middle ml-1 text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </article>
+            <!-- Project Gamma -->
+            <article class="border-4 border-primary bg-surface-container-lowest shadow-brutal shadow-brutal-hover transition-all flex flex-col">
+                <div class="h-48 bg-tertiary border-b-4 border-primary relative overflow-hidden">
+                    <img alt="Abstract code lines" class="w-full h-full object-cover mix-blend-multiply opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAP0Ijewm5_7RzumveWkWrrPSW5PbtvcnjOQtnGmA8yCNwcP_yomEgKnOKICSv9lIrE7GyqkxbKSPdd-dR_MbsHzXy4VVEGvnnS92WckA1ppzJFnSeGvdS7ffcXYNdfJ06uwDgfQeg5sR0_sq-R-IG8Y3y7T59ZV36dLd2GFfKaI2vllSdmqECkCBWRHZPj82CQBlZT9-oDmhJANoWSSwcy5NL6hAb8bVydIlbDt2WirnnhxFd268MCfVyH-q6f2zEZlh5Ku831q8"/>
+                    <div class="absolute top-4 right-4 bg-primary-fixed text-primary font-headline font-bold px-2 py-1 border-2 border-primary">v2.1.4</div>
+                </div>
+                <div class="p-6 flex-1 flex flex-col">
+                    <h3 class="font-display font-black text-2xl uppercase mb-2">Project Gamma</h3>
+                    <p class="font-body text-on-surface-variant font-medium mb-6 flex-1">Distributed caching layer bridging legacy SQL databases with modern microservices. Improved query response times by an order of magnitude.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">SQL</span>
+                        <span class="bg-surface-variant border-2 border-primary px-2 py-1 font-headline text-xs font-bold uppercase">Redis</span>
+                    </div>
+                    <a class="block w-full text-center bg-primary text-on-primary font-headline font-bold py-3 border-2 border-primary hover:bg-tertiary hover:text-on-tertiary transition-colors uppercase" href="#">
+                        REPO.LINK <span class="material-symbols-outlined align-middle ml-1 text-sm">open_in_new</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- JSON: Footer -->
+    <footer class="bg-primary dark:bg-surface-container-highest text-on-primary dark:text-on-surface font-display font-black uppercase text-4xl md:text-6xl w-full mt-auto border-t-8 border-primary dark:border-primary-fixed flex flex-col md:flex-row justify-between items-start p-10 gap-8" id="contact">
+        <div class="text-secondary dark:text-secondary-fixed text-xl font-headline tracking-widest">
+            © 2024 DEV.STK — BUILT WITH CODE
+        </div>
+        <div class="flex flex-col gap-4 text-right items-end w-full md:w-auto">
+            <a class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors hover:skew-x-2 transition-transform block border-b-4 border-transparent hover:border-tertiary" href="#">GitHub</a>
+            <a class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors hover:skew-x-2 transition-transform block border-b-4 border-transparent hover:border-tertiary" href="#">LinkedIn</a>
+            <a class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors hover:skew-x-2 transition-transform block border-b-4 border-transparent hover:border-tertiary" href="#">Twitter</a>
+            <a class="text-on-primary dark:text-on-surface-variant opacity-80 hover:opacity-100 hover:text-tertiary dark:hover:text-tertiary-fixed transition-colors hover:skew-x-2 transition-transform block border-b-4 border-transparent hover:border-tertiary" href="#">Email</a>
+        </div>
+    </footer>
+</main>
+</body></html>
